@@ -6,9 +6,29 @@ pipeline {
     }
 
     stages {
-        stage('Build') { 
+        stage('Install dependencies') { 
             steps {
                 sh 'npm install' 
+            }
+        }
+        stage('Build') { 
+            steps {
+                sh 'npm run build' 
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh 'npm test' 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                pushToCloudFoundry(
+                    target: 'api.sys.clearlake.cf-app.com',
+                    organization: 'graybar',
+                    cloudSpace: 'dev',
+                    credentialsId: 'pre-bhakta'
+                )
             }
         }
     }
