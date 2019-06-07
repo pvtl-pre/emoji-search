@@ -1,0 +1,8 @@
+---
+applications:
+- name: emoji-search
+  buildpacks:
+      - staticfile_buildpack
+  memory: 1G
+  path: build
+  random-route: false
