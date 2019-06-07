@@ -27,7 +27,8 @@ pipeline {
                     target: 'api.sys.clearlake.cf-app.com',
                     organization: 'graybar',
                     cloudSpace: 'dev',
-                    credentialsId: 'pre-bhakta'
+                    credentialsId: 'pre-bhakta',
+                    selfSigned: true
                 )
             }
         }
