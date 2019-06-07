@@ -28,7 +28,7 @@ pipeline {
                     organization: 'graybar',
                     cloudSpace: 'dev',
                     credentialsId: 'pre-bhakta',
-                    selfSigned: true
+                    selfSigned: 'true'
                 )
             }
         }
