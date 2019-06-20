@@ -28,8 +28,7 @@ pipeline {
                     organization: 'graybar',
                     cloudSpace: 'dev',
                     credentialsId: 'pre-bhakta',
-                    selfSigned: 'true',
-                    manifestChoice: [manifestFile: 'manifest.yml']
+                    selfSigned: 'true'
                 )
             }
         }
